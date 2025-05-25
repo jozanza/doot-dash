@@ -2224,6 +2224,7 @@ impl Monster {
     }
     pub fn new_player(player_id: PlayerId) -> Self {
         let mut monster = Self::new(MonsterController::Player(player_id));
+        monster.hp = Stat::new(10);
         monster.add_skill(0); // ensure monster has basic movement at index 0
         monster.add_skill(1);
         monster.add_skill(2);
